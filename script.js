@@ -11,9 +11,10 @@ weatherForm.addEventListener("submit", async event => {
             const weatherData = await getWeatherData(city);
             displayWeatherData(weatherData);
         } catch(error) {
-            displayError(error);
+            //displayError(error);
         }
     } else{
+        todaysWeather.textContent = "";
         displayError("Enter a City name!");
     }
 })
@@ -23,7 +24,7 @@ async function getWeatherData(city) {
     const response = await fetch(apiUrl);
     if(!response.ok){
         todaysWeather.textContent = "";
-        throw new Error("Could not get Weather data.");
+        displayError("Could not get Weather data.");
     }
     return await response.json();
 }
@@ -93,5 +94,6 @@ function displayError(msg) {
     errorMessage.textContent = msg;
     errorMessage.classList.add("todaysWeather");
     todaysWeather.style.display ="flex";
+    todaysWeather.style.color = "red";
     todaysWeather.appendChild(errorMessage);
 }
