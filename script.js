@@ -47,6 +47,7 @@ function displayWeatherData(data) {
     const iconDisplay = document.createElement("p");
 
     cityDisplay.textContent = cityName.toUpperCase();
+    cityDisplay.style.textDecoration = "underline";
     iconDisplay.textContent = weatherEmoji(weatherId);
     tempDisplay.textContent = "Temperature : " + tempToday + "°C";
     humidityDisplay.textContent = "Humidity : " + humidityToday + "%";
