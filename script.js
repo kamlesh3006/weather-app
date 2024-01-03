@@ -40,6 +40,7 @@ function displayWeatherData(data) {
 
     todaysWeather.textContent = "";
     todaysWeather.style.display = "flex";
+    todaysWeather.style.color = "black";
     const cityDisplay = document.createElement("h1");
     const tempDisplay = document.createElement("p");
     const humidityDisplay = document.createElement("p");
@@ -49,16 +50,11 @@ function displayWeatherData(data) {
 
     cityDisplay.textContent = cityName.toUpperCase();
     cityDisplay.style.textDecoration = "underline";
-    cityDisplay.style.color = "black";
     iconDisplay.textContent = weatherEmoji(weatherId);
     tempDisplay.textContent = "Temperature : " + tempToday + "°C";
-    tempDisplay.style.color = "black";
     humidityDisplay.textContent = "Humidity : " + humidityToday + "%";
-    humidityDisplay.style.color = "black";
     windDisplay.textContent = "Wind speed : " + windToday + "m/s";
-    windDisplay.style.color = "black";
     descDisplay.textContent = descToday;
-    descDisplay.style.color = "black";
     iconDisplay.classList.add("iconDisplay");
 
     todaysWeather.appendChild(cityDisplay);
