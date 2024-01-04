@@ -56,6 +56,7 @@ function displayWeatherData(data) {
     cityDisplay.style.textDecoration = "underline";
     iconDisplay.textContent = weatherEmoji(weatherId);
     dateDisplay.textContent = date;
+    dateDisplay.style.fontWeight = "bold";
     tempDisplay.textContent = "Temperature : " + tempToday + "°C";
     humidityDisplay.textContent = "Humidity : " + humidityToday + "%";
     windDisplay.textContent = "Wind speed : " + windToday + "m/s";
@@ -64,8 +65,8 @@ function displayWeatherData(data) {
     iconDisplay.classList.add("iconDisplay");
 
     todaysWeather.appendChild(cityDisplay);
-    todaysWeather.appendChild(iconDisplay);
     todaysWeather.appendChild(dateDisplay);
+    todaysWeather.appendChild(iconDisplay);
     todaysWeather.appendChild(tempDisplay);
     todaysWeather.appendChild(humidityDisplay);
     todaysWeather.appendChild(windDisplay);
@@ -99,13 +100,14 @@ function displayWeatherData(data) {
         descDisplay.style.fontWeight = "bold";
         iconShow.textContent = weatherEmoji(iconId);
         fDateDisplay.textContent = nDate;
-        iconDisplay.classList.add("iconShow");
+        fDateDisplay.style.fontWeight = "bold";
+        iconShow.classList.add("iconShow");
         tempDisplay.classList.add("futureForecast");
         humidityDisplay.classList.add("futureForecast");
         windDisplay.classList.add("futureForecast");
         descDisplay.classList.add("futureForecast");
-        container.appendChild(iconShow);
         container.appendChild(fDateDisplay);
+        container.appendChild(iconShow);
         container.appendChild(tempDisplay);
         container.appendChild(humidityDisplay);
         container.appendChild(windDisplay);
