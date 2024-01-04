@@ -76,14 +76,13 @@ function displayWeatherData(data) {
     nextDaysContainer.style.display = "flex";
 
     for (let i = 1; i <= 3; i++) {
-        const dayData = data.list[i];
-        const nextDate = data.list[i+(8*i)].dt_txt.split(" ");
+        const nextDate = data.list[(8*i)].dt_txt.split(" ");
         const nDate = nextDate[0];
-        const temperature = (dayData.main.temp - 273.15).toFixed(2);
-        const humidity = dayData.main.humidity;
-        const windSpeed = dayData.wind.speed;
-        const description = dayData.weather[0].description;
-        const iconId = dayData.weather[0].id; 
+        const temperature = (data.list[(8*i)].main.temp - 273.15).toFixed(2);
+        const humidity = data.list[(8*i)].main.humidity;
+        const windSpeed = data.list[(8*i)].wind.speed;
+        const description = data.list[(8*i)].weather[0].description;
+        const iconId = data.list[(8*i)].weather[0].id; 
         const container = document.querySelector(`.daysLater:nth-child(${i})`);
         container.textContent = "";
     
