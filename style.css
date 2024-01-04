@@ -7,6 +7,10 @@ body {
     background-color: rgb(240, 240, 240);
 }
 
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 input {
     padding: 10px;
     font-size: 16px;
@@ -37,10 +41,20 @@ button:hover {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     width: 400px;
     margin: 15px auto;
+}
+
+.iconShow {
+    font-size: 60px;
+}
+
+.futureForecast {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .todaysWeather {
@@ -48,8 +62,9 @@ button:hover {
     flex-direction: column;
 }
 
+
 .iconDisplay {
-    font-size: 120px;
+    font-size: 100px;
 }
 
 .todaysWeather p {
@@ -64,10 +79,11 @@ button:hover {
 }
 
 .daysLater {
-    flex: 1;
+    flex-grow: 1;
     background-color: white;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
     margin: 0 10px;
+    width: 150px;
 }
